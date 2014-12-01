@@ -28,10 +28,20 @@
 #import "AudioFileReader.h"
 #import "AudioFileWriter.h"
 
+typedef enum : NSUInteger {
+    BUTTON_RECORDING,
+    BUTTON_STOP,
+    BUTTON_PLAYING,
+} AudioButtonStatus;
 @interface ViewController : UIViewController
 
 @property (nonatomic, strong) Novocaine *audioManager;
 @property (nonatomic, strong) AudioFileReader *fileReader;
 @property (nonatomic, strong) AudioFileWriter *fileWriter;
+
+@property AudioButtonStatus buttonStatus;
+@property (weak, nonatomic) IBOutlet UIButton *audioButton;
+- (IBAction)audioButtonClick:(id)sender;
+
 
 @end

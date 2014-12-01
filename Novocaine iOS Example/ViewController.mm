@@ -40,7 +40,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewDidUnload
@@ -218,7 +217,7 @@
 //    };
 
     // START IT UP YO
-    [self.audioManager play];
+    [self changeToRecording];
 
 }
 
@@ -231,4 +230,44 @@
     }
 }
 
+- (void)changeToPlay
+{
+    _buttonStatus = BUTTON_PLAYING;
+    [self.audioManager pause];
+    [_audioButton setTitle:@"STOP PLAY" forState:UIControlStateNormal];
+}
+
+- (void)changeToStop
+{
+    _buttonStatus = BUTTON_STOP;
+    [_audioButton setTitle:@"START RECORDING" forState:UIControlStateNormal];
+}
+
+- (void)changeToRecording
+{
+    _buttonStatus = BUTTON_RECORDING;
+    [_audioManager play];
+    [_audioButton setTitle:@"STOP Recording & START PLAY RESULT" forState:UIControlStateNormal];
+}
+
+- (void)changeStatus
+{
+    switch (_buttonStatus) {
+        case BUTTON_RECORDING:
+            [self changeToPlay];
+            break;
+        case BUTTON_PLAYING:
+            [self changeToStop];
+            break;
+        case BUTTON_STOP:
+            [self changeToRecording];
+            break;
+            
+        default:
+            break;
+    }
+}
+- (IBAction)audioButtonClick:(id)sender {
+    [self changeStatus];
+}
 @end
