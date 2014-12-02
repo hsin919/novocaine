@@ -58,14 +58,17 @@
     self.audioManager = [Novocaine audioManager];
 
     
-    // Basic playthru example
-//    [self.audioManager setInputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels) {
-//        float volume = 0.5;
-//        vDSP_vsmul(data, 1, &volume, data, 1, numFrames*numChannels);
-//        wself.ringBuffer->AddNewInterleavedFloatData(data, numFrames, numChannels);
-//    }];
-//    
-//    
+//     Basic playthru example
+    [self.audioManager setInputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels) {
+        if(wself.buttonStatus == BUTTON_RECORDING)
+        {
+            float volume = 1.5;
+            vDSP_vsmul(data, 1, &volume, data, 1, numFrames*numChannels);
+            wself.ringBuffer->AddNewInterleavedFloatData(data, numFrames, numChannels);
+        }
+    }];
+    
+//
 //    [self.audioManager setOutputBlock:^(float *outData, UInt32 numFrames, UInt32 numChannels) {
 //        wself.ringBuffer->FetchInterleavedData(outData, numFrames, numChannels);
 //    }];
@@ -188,8 +191,16 @@
     
     [self.audioManager setOutputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels)
      {
-         [wself.fileReader retrieveFreshAudio:data numFrames:numFrames numChannels:numChannels];
-         NSLog(@"Time: %f", wself.fileReader.currentTime);
+         if(wself.buttonStatus == BUTTON_PLAYING)
+         {
+             wself.ringBuffer->FetchInterleavedData(data, numFrames, numChannels);
+         }
+         else if(wself.buttonStatus == BUTTON_RECORDING)
+         {
+             [wself.fileReader retrieveFreshAudio:data numFrames:numFrames numChannels:numChannels];
+         }
+
+         NSLog(@"Time: %f numFrames: %u numChannels: %u", wself.fileReader.currentTime, (unsigned int)numFrames, (unsigned int)numChannels);
      }];
     
     // AUDIO FILE WRITING YEAH!
@@ -233,13 +244,13 @@
 - (void)changeToPlay
 {
     _buttonStatus = BUTTON_PLAYING;
-    [self.audioManager pause];
     [_audioButton setTitle:@"STOP PLAY" forState:UIControlStateNormal];
 }
 
 - (void)changeToStop
 {
     _buttonStatus = BUTTON_STOP;
+    [self.audioManager pause];
     [_audioButton setTitle:@"START RECORDING" forState:UIControlStateNormal];
 }
 
