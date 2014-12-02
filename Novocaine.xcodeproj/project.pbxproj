@@ -17,6 +17,9 @@
 		D97DA1191A2D546B00084088 /* libsystem_wrappers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D97DA1061A2D546B00084088 /* libsystem_wrappers.a */; };
 		D97DA11A1A2D546B00084088 /* libvad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D97DA1071A2D546B00084088 /* libvad.a */; };
 		D97DA11B1A2D546B00084088 /* libvad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D97DA1071A2D546B00084088 /* libvad.a */; };
+		D97DA1221A2D602C00084088 /* SPwebRTCManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = D97DA1211A2D602C00084088 /* SPwebRTCManager.mm */; };
+		D97DA1231A2D602C00084088 /* SPwebRTCManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = D97DA1211A2D602C00084088 /* SPwebRTCManager.mm */; };
+		D97DA1251A2D642100084088 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D97DA1241A2D642100084088 /* libstdc++.6.0.9.dylib */; };
 		FA0B92E9154ACB100079834E /* AudioFileReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA0B92E8154ACB100079834E /* AudioFileReader.mm */; };
 		FA0B92EA154ACB100079834E /* AudioFileReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA0B92E8154ACB100079834E /* AudioFileReader.mm */; };
 		FA2015DD154B02CC00F8D3AC /* TLC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA2015DC154B02CC00F8D3AC /* TLC.mp3 */; };
@@ -66,6 +69,9 @@
 		D97DA10F1A2D546B00084088 /* module_common_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = module_common_types.h; sourceTree = "<group>"; };
 		D97DA1121A2D546B00084088 /* constructor_magic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constructor_magic.h; sourceTree = "<group>"; };
 		D97DA1131A2D546B00084088 /* typedefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = typedefs.h; sourceTree = "<group>"; };
+		D97DA1201A2D602C00084088 /* SPwebRTCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPwebRTCManager.h; sourceTree = "<group>"; };
+		D97DA1211A2D602C00084088 /* SPwebRTCManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SPwebRTCManager.mm; sourceTree = "<group>"; };
+		D97DA1241A2D642100084088 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		FA0B92E7154ACB100079834E /* AudioFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileReader.h; sourceTree = "<group>"; };
 		FA0B92E8154ACB100079834E /* AudioFileReader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioFileReader.mm; sourceTree = "<group>"; };
 		FA2015DC154B02CC00F8D3AC /* TLC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TLC.mp3; sourceTree = "<group>"; };
@@ -133,9 +139,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5526EF152A6466003D9601 /* Accelerate.framework in Frameworks */,
+				D97DA1251A2D642100084088 /* libstdc++.6.0.9.dylib in Frameworks */,
 				9AE2143E1768D0C60068A4DC /* AVFoundation.framework in Frameworks */,
 				D97DA1151A2D546B00084088 /* libaudio_processing.a in Frameworks */,
-				FA5526EF152A6466003D9601 /* Accelerate.framework in Frameworks */,
 				D97DA1171A2D546B00084088 /* libsignal_processing.a in Frameworks */,
 				D97DA1191A2D546B00084088 /* libsystem_wrappers.a in Frameworks */,
 				FA5526F0152A6466003D9601 /* AudioToolbox.framework in Frameworks */,
@@ -228,6 +235,8 @@
 		FA552628152A63A4003D9601 = {
 			isa = PBXGroup;
 			children = (
+				D97DA1201A2D602C00084088 /* SPwebRTCManager.h */,
+				D97DA1211A2D602C00084088 /* SPwebRTCManager.mm */,
 				D97DA1001A2D546B00084088 /* webrtc */,
 				FA552694152A63F6003D9601 /* Novocaine */,
 				FA55267F152A63B6003D9601 /* Novocaine Mac Example */,
@@ -249,6 +258,7 @@
 		FA552636152A63A4003D9601 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D97DA1241A2D642100084088 /* libstdc++.6.0.9.dylib */,
 				FA5526EB152A6466003D9601 /* Accelerate.framework */,
 				FA55269D152A6405003D9601 /* Accelerate.framework */,
 				FA5526EC152A6466003D9601 /* AudioToolbox.framework */,
@@ -386,7 +396,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = "Datta Lab, Harvard University";
+				ORGANIZATIONNAME = "";
 			};
 			buildConfigurationList = FA55262D152A63A4003D9601 /* Build configuration list for PBXProject "Novocaine" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -442,6 +452,7 @@
 				FA55269A152A63F6003D9601 /* Novocaine.m in Sources */,
 				FA55269C152A63F6003D9601 /* RingBuffer.mm in Sources */,
 				FA0B92E9154ACB100079834E /* AudioFileReader.mm in Sources */,
+				D97DA1221A2D602C00084088 /* SPwebRTCManager.mm in Sources */,
 				FA2015ED154B0DA700F8D3AC /* AudioFileWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA9FB52B152A6505004B7AA8 /* Novocaine.m in Sources */,
+				D97DA1231A2D602C00084088 /* SPwebRTCManager.mm in Sources */,
 				FA9FB52D152A6505004B7AA8 /* RingBuffer.mm in Sources */,
 				FA5526DA152A6452003D9601 /* main.m in Sources */,
 				FA5526DE152A6452003D9601 /* AppDelegate.mm in Sources */,
@@ -641,6 +653,11 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Novocaine iOS Example/Novocaine iOS Example-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/",
+				);
 				INFOPLIST_FILE = "Novocaine iOS Example/Novocaine iOS Example-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -658,6 +675,11 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Novocaine iOS Example/Novocaine iOS Example-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/",
+				);
 				INFOPLIST_FILE = "Novocaine iOS Example/Novocaine iOS Example-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
