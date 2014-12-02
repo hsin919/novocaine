@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" promptedForUpgradeToXcode5="NO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment version="1536" identifier="iOS"/>
         <development version="5000" identifier="xcode"/>
@@ -31,6 +31,13 @@
                         <action selector="audioButtonClick:" destination="-1" eventType="touchUpInside" id="11"/>
                     </connections>
                 </button>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="up6-ps-IQ4">
+                    <rect key="frame" x="263" y="302" width="51" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="0cq-Gd-YHN"/>
+                        <constraint firstAttribute="width" constant="49" id="fU2-ho-eMg"/>
+                    </constraints>
+                </switch>
             </subviews>
             <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -38,6 +45,8 @@
                 <constraint firstItem="8" firstAttribute="top" secondItem="6" secondAttribute="top" constant="111" id="15"/>
                 <constraint firstItem="8" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="16"/>
                 <constraint firstAttribute="trailing" secondItem="8" secondAttribute="trailing" id="KQp-H3-aAJ"/>
+                <constraint firstItem="up6-ps-IQ4" firstAttribute="top" secondItem="8" secondAttribute="bottom" constant="32" id="bSc-c6-vdd"/>
+                <constraint firstAttribute="trailing" secondItem="up6-ps-IQ4" secondAttribute="trailing" constant="8" id="sl9-dy-b0E"/>
                 <constraint firstItem="8" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="z7X-mg-NL1"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

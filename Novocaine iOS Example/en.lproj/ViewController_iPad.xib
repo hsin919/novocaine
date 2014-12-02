@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" promptedForUpgradeToXcode5="NO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment version="1536" identifier="iOS"/>
         <development version="5000" identifier="xcode"/>
@@ -30,11 +30,20 @@
                         <action selector="audioButtonClick:" destination="-1" eventType="touchUpInside" id="7"/>
                     </connections>
                 </button>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LKe-gp-zxN">
+                    <rect key="frame" x="486" y="556" width="51" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="49" id="YWq-It-ier"/>
+                        <constraint firstAttribute="height" constant="31" id="j9P-WV-zbY"/>
+                    </constraints>
+                </switch>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="4" firstAttribute="top" secondItem="2" secondAttribute="top" constant="248" id="9"/>
                 <constraint firstItem="4" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="10"/>
+                <constraint firstItem="LKe-gp-zxN" firstAttribute="top" secondItem="4" secondAttribute="bottom" constant="44" id="0mt-kQ-hcN"/>
+                <constraint firstAttribute="trailing" secondItem="LKe-gp-zxN" secondAttribute="trailing" constant="233" id="OvR-mH-N36"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>

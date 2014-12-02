@@ -23,7 +23,7 @@
 
 
 #import "ViewController.h"
-
+#import "SPwebRTCManager.h"
 @interface ViewController ()
 
 @property (nonatomic, assign) RingBuffer *ringBuffer;
@@ -259,6 +259,7 @@
     _buttonStatus = BUTTON_RECORDING;
     [_audioManager play];
     [_audioButton setTitle:@"STOP Recording & START PLAY RESULT" forState:UIControlStateNormal];
+    [[SPwebRTCManager sharedManager] prepareProcessing];
 }
 
 - (void)changeStatus
