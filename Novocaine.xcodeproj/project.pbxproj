@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		6BB59729198F7E20006AE4AE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BB59728198F7E20006AE4AE /* Default-568h@2x.png */; };
 		9AE2143E1768D0C60068A4DC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE2143D1768D0C60068A4DC /* AVFoundation.framework */; };
+		D97DA1141A2D546B00084088 /* libaudio_processing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D97DA1041A2D546B00084088 /* libaudio_processing.a */; };
+		D97DA1151A2D546B00084088 /* libaudio_processing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D97DA1041A2D546B00084088 /* libaudio_processing.a */; };
+		D97DA1161A2D546B00084088 /* libsignal_processing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D97DA1051A2D546B00084088 /* libsignal_processing.a */; };
+		D97DA1171A2D546B00084088 /* libsignal_processing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D97DA1051A2D546B00084088 /* libsignal_processing.a */; };
+		D97DA1181A2D546B00084088 /* libsystem_wrappers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D97DA1061A2D546B00084088 /* libsystem_wrappers.a */; };
+		D97DA1191A2D546B00084088 /* libsystem_wrappers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D97DA1061A2D546B00084088 /* libsystem_wrappers.a */; };
+		D97DA11A1A2D546B00084088 /* libvad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D97DA1071A2D546B00084088 /* libvad.a */; };
+		D97DA11B1A2D546B00084088 /* libvad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D97DA1071A2D546B00084088 /* libvad.a */; };
 		FA0B92E9154ACB100079834E /* AudioFileReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA0B92E8154ACB100079834E /* AudioFileReader.mm */; };
 		FA0B92EA154ACB100079834E /* AudioFileReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA0B92E8154ACB100079834E /* AudioFileReader.mm */; };
 		FA2015DD154B02CC00F8D3AC /* TLC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA2015DC154B02CC00F8D3AC /* TLC.mp3 */; };
@@ -46,6 +54,18 @@
 /* Begin PBXFileReference section */
 		6BB59728198F7E20006AE4AE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		9AE2143D1768D0C60068A4DC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D97DA1011A2D546B00084088 /* common_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_types.h; sourceTree = "<group>"; };
+		D97DA1021A2D546B00084088 /* engine_configurations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = engine_configurations.h; sourceTree = "<group>"; };
+		D97DA1041A2D546B00084088 /* libaudio_processing.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libaudio_processing.a; sourceTree = "<group>"; };
+		D97DA1051A2D546B00084088 /* libsignal_processing.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsignal_processing.a; sourceTree = "<group>"; };
+		D97DA1061A2D546B00084088 /* libsystem_wrappers.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsystem_wrappers.a; sourceTree = "<group>"; };
+		D97DA1071A2D546B00084088 /* libvad.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvad.a; sourceTree = "<group>"; };
+		D97DA10B1A2D546B00084088 /* audio_processing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audio_processing.h; sourceTree = "<group>"; };
+		D97DA10C1A2D546B00084088 /* mock_audio_processing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mock_audio_processing.h; sourceTree = "<group>"; };
+		D97DA10E1A2D546B00084088 /* module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = module.h; sourceTree = "<group>"; };
+		D97DA10F1A2D546B00084088 /* module_common_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = module_common_types.h; sourceTree = "<group>"; };
+		D97DA1121A2D546B00084088 /* constructor_magic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constructor_magic.h; sourceTree = "<group>"; };
+		D97DA1131A2D546B00084088 /* typedefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = typedefs.h; sourceTree = "<group>"; };
 		FA0B92E7154ACB100079834E /* AudioFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileReader.h; sourceTree = "<group>"; };
 		FA0B92E8154ACB100079834E /* AudioFileReader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioFileReader.mm; sourceTree = "<group>"; };
 		FA2015DC154B02CC00F8D3AC /* TLC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TLC.mp3; sourceTree = "<group>"; };
@@ -98,10 +118,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA5526A5152A640E003D9601 /* Accelerate.framework in Frameworks */,
+				D97DA11A1A2D546B00084088 /* libvad.a in Frameworks */,
+				D97DA1141A2D546B00084088 /* libaudio_processing.a in Frameworks */,
+				D97DA1181A2D546B00084088 /* libsystem_wrappers.a in Frameworks */,
 				FA5526A6152A640E003D9601 /* AudioToolbox.framework in Frameworks */,
 				FA5526A7152A640E003D9601 /* AudioUnit.framework in Frameworks */,
 				FA5526A8152A640E003D9601 /* CoreAudio.framework in Frameworks */,
 				FA55267E152A63B6003D9601 /* Cocoa.framework in Frameworks */,
+				D97DA1161A2D546B00084088 /* libsignal_processing.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,9 +134,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AE2143E1768D0C60068A4DC /* AVFoundation.framework in Frameworks */,
+				D97DA1151A2D546B00084088 /* libaudio_processing.a in Frameworks */,
 				FA5526EF152A6466003D9601 /* Accelerate.framework in Frameworks */,
+				D97DA1171A2D546B00084088 /* libsignal_processing.a in Frameworks */,
+				D97DA1191A2D546B00084088 /* libsystem_wrappers.a in Frameworks */,
 				FA5526F0152A6466003D9601 /* AudioToolbox.framework in Frameworks */,
 				FA5526F2152A6466003D9601 /* CoreAudio.framework in Frameworks */,
+				D97DA11B1A2D546B00084088 /* libvad.a in Frameworks */,
 				FA5526D0152A6452003D9601 /* UIKit.framework in Frameworks */,
 				FA5526D1152A6452003D9601 /* Foundation.framework in Frameworks */,
 				FA5526D2152A6452003D9601 /* CoreGraphics.framework in Frameworks */,
@@ -122,9 +150,85 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D97DA1001A2D546B00084088 /* webrtc */ = {
+			isa = PBXGroup;
+			children = (
+				D97DA1011A2D546B00084088 /* common_types.h */,
+				D97DA1021A2D546B00084088 /* engine_configurations.h */,
+				D97DA1031A2D546B00084088 /* lib */,
+				D97DA1081A2D546B00084088 /* modules */,
+				D97DA1101A2D546B00084088 /* system_wrappers */,
+				D97DA1131A2D546B00084088 /* typedefs.h */,
+			);
+			path = webrtc;
+			sourceTree = "<group>";
+		};
+		D97DA1031A2D546B00084088 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				D97DA1041A2D546B00084088 /* libaudio_processing.a */,
+				D97DA1051A2D546B00084088 /* libsignal_processing.a */,
+				D97DA1061A2D546B00084088 /* libsystem_wrappers.a */,
+				D97DA1071A2D546B00084088 /* libvad.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		D97DA1081A2D546B00084088 /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				D97DA1091A2D546B00084088 /* audio_processing */,
+				D97DA10D1A2D546B00084088 /* interface */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		D97DA1091A2D546B00084088 /* audio_processing */ = {
+			isa = PBXGroup;
+			children = (
+				D97DA10A1A2D546B00084088 /* include */,
+			);
+			path = audio_processing;
+			sourceTree = "<group>";
+		};
+		D97DA10A1A2D546B00084088 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				D97DA10B1A2D546B00084088 /* audio_processing.h */,
+				D97DA10C1A2D546B00084088 /* mock_audio_processing.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		D97DA10D1A2D546B00084088 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				D97DA10E1A2D546B00084088 /* module.h */,
+				D97DA10F1A2D546B00084088 /* module_common_types.h */,
+			);
+			path = interface;
+			sourceTree = "<group>";
+		};
+		D97DA1101A2D546B00084088 /* system_wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				D97DA1111A2D546B00084088 /* interface */,
+			);
+			path = system_wrappers;
+			sourceTree = "<group>";
+		};
+		D97DA1111A2D546B00084088 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				D97DA1121A2D546B00084088 /* constructor_magic.h */,
+			);
+			path = interface;
+			sourceTree = "<group>";
+		};
 		FA552628152A63A4003D9601 = {
 			isa = PBXGroup;
 			children = (
+				D97DA1001A2D546B00084088 /* webrtc */,
 				FA552694152A63F6003D9601 /* Novocaine */,
 				FA55267F152A63B6003D9601 /* Novocaine Mac Example */,
 				FA5526D3152A6452003D9601 /* Novocaine iOS Example */,
@@ -414,6 +518,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -450,6 +555,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -490,6 +596,10 @@
 				GCC_PREFIX_HEADER = "Novocaine Mac Example/Novocaine Mac Example-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "Novocaine Mac Example/Novocaine Mac Example-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/webrtc/lib",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -513,6 +623,10 @@
 				GCC_PREFIX_HEADER = "Novocaine Mac Example/Novocaine Mac Example-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "Novocaine Mac Example/Novocaine Mac Example-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/webrtc/lib",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -528,6 +642,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Novocaine iOS Example/Novocaine iOS Example-Prefix.pch";
 				INFOPLIST_FILE = "Novocaine iOS Example/Novocaine iOS Example-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/webrtc/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -541,6 +659,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Novocaine iOS Example/Novocaine iOS Example-Prefix.pch";
 				INFOPLIST_FILE = "Novocaine iOS Example/Novocaine iOS Example-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/webrtc/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
